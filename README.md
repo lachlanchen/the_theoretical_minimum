@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="figs/banner.png" alt="LazyingArt banner" />
+</p>
+
 # My Notes for [Theoretical Minimum Courses](http://theoreticalminimum.com/)
 
 ## Lecture Notes based on Leonard Susskind's [Theoretical Minimum](http://theoreticalminimum.com/home)
