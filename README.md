@@ -1,9 +1,9 @@
 [English](README.md) · [العربية](i18n/README.ar.md) · [Español](i18n/README.es.md) · [Français](i18n/README.fr.md) · [日本語](i18n/README.ja.md) · [한국어](i18n/README.ko.md) · [Tiếng Việt](i18n/README.vi.md) · [中文 (简体)](i18n/README.zh-Hans.md) · [中文（繁體）](i18n/README.zh-Hant.md) · [Deutsch](i18n/README.de.md) · [Русский](i18n/README.ru.md)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/lachlanchen/lachlanchen/main/logos/banner.png" alt="LazyingArt banner" />
-</p>
 
+[![LazyingArt banner](https://github.com/lachlanchen/lachlanchen/raw/main/figs/banner.png)](https://github.com/lachlanchen/lachlanchen/blob/main/figs/banner.png)
+
+---
 
 # My Notes for [Theoretical Minimum Courses](http://theoreticalminimum.com/)
 
@@ -13,17 +13,17 @@
 ![Notebooks](https://img.shields.io/badge/Jupyter-Notebooks-F37626)
 ![Status](https://img.shields.io/badge/Project-Document--first-0A7E8C)
 
-## Overview
+## 🌟 Overview
 
 This repository is primarily a document-first physics notes project built around LaTeX manuscripts (`*.tex`) and a shared bibliography (`tm.bib`), with supporting Python scripts and notebooks for figures and symbolic checks.
 
-## Lecture Notes based on Leonard Susskind's [Theoretical Minimum](http://theoreticalminimum.com/home)
+## 🎓 Lecture Notes from Leonard Susskind's [Theoretical Minimum](http://theoreticalminimum.com/home)
 
 **Disclaimer** I have created these notes as an aide-mémoire for my own use; if you find them useful, you are welcome, but I'd appreciate it if you'd let me know if you are using them. They are _not_ intended as a substitute for listening to the lectures. The intellectual property for all material derived from the lectures belongs, of course, to Professor Susskind; any mistakes, however, are my own.
 
 The notes were created using [TexStudio](https://www.texstudio.org/), and the bibliography by [JabRef](https://www.jabref.org/).
 
-## Features
+## ✨ Features
 
 - 📚 Course-organized LaTeX manuscripts for core Theoretical Minimum topics.
 - 📖 Central bibliography (`tm.bib`) shared across documents.
@@ -32,7 +32,7 @@ The notes were created using [TexStudio](https://www.texstudio.org/), and the bi
 - 🧮 Computational supplements in Jupyter notebooks using `pytearcat`.
 - 🧪 NetLogo model (`Ising.nlogo`) for domain wall visualization.
 
-## Project Structure
+## 🗂️ Project Structure
 
 ```text
 .
@@ -41,14 +41,16 @@ The notes were created using [TexStudio](https://www.texstudio.org/), and the bi
 ├── tm.bib
 ├── figs/
 ├── i18n/
+├── .auto-readme-work/
+├── notebooks/
 ├── *.tex                 # Lecture notes, exercises, glossary, QFT supplements
 ├── *.py                  # Helper utilities and plotting scripts
-├── *.ipynb               # Computational notebooks
+├── notebooks/*.ipynb      # Computational notebooks
 ├── Ising.nlogo
 └── tm.wpr
 ```
 
-## Quick Start
+## 🚀 Quick Start
 
 | Goal | Command(s) |
 |---|---|
@@ -57,7 +59,7 @@ The notes were created using [TexStudio](https://www.texstudio.org/), and the bi
 | Audit unreferenced figures | `python audit-images.py --figs ./figs` |
 | Open notebooks | `jupyter notebook` |
 
-## Course Notes Index
+## 📚 Course Notes Index
 
 | File | Description |
 |---|---|
@@ -77,7 +79,7 @@ The notes were created using [TexStudio](https://www.texstudio.org/), and the bi
 | `sm.tex` | [Statistical Mechanics](http://theoreticalminimum.com/courses/statistical-mechanics/2013/spring) |
 | `tm.bib` | Bibliography for Theoretical Minimum |
 
-## Exercises
+## 🧪 Exercises
 
 | File | Description |
 |---|---|
@@ -87,7 +89,7 @@ The notes were created using [TexStudio](https://www.texstudio.org/), and the bi
 
 Note: earlier README text referenced `schwartzchild.ipnb`; the repository file is `schwartzchild.ipynb`.
 
-## Helper Programs
+## 🧰 Helper Programs
 
 | File | Description |
 |---|---|
@@ -101,14 +103,14 @@ Note: earlier README text referenced `schwartzchild.ipnb`; the repository file i
 | `template.py` | Template for Python programs |
 | `tm.wpr` | Wing IDE project for helper files |
 
-## Proofs to Supplement *QFT in a Nutshell*
+## 📐 Proofs to Supplement *QFT in a Nutshell*
 
 | File | Description |
 |---|---|
 | `qft1.tex` | Motivation and Foundation |
 | `qft2.tex` | Dirac and the Spinor |
 
-## Prerequisites
+## ✅ Prerequisites
 
 - A LaTeX distribution with `lualatex` and BibTeX tooling.
 - `makeglossaries` for documents that use glossary entries.
@@ -117,7 +119,7 @@ Note: earlier README text referenced `schwartzchild.ipnb`; the repository file i
 - `pytearcat` for cosmology/Schwarzschild notebook workflows.
 - Optional: [TexStudio](https://www.texstudio.org/) and [JabRef](https://www.jabref.org/).
 
-## Installation
+## 🧱 Installation
 
 No package manager file is currently provided (`requirements.txt`, `pyproject.toml`, etc. are not present), so setup is manual.
 
@@ -139,9 +141,9 @@ If your TeX distribution is missing components, install packages for:
 - `thmtools`
 - `pgfplots`
 
-## Usage
+## 🧭 Usage
 
-### Compile lecture notes (LaTeX)
+### 🧪 Compile lecture notes (LaTeX)
 
 Many sources specify LuaLaTeX explicitly (`% !TeX program = lualatex`). A general build sequence:
 
@@ -156,7 +158,7 @@ lualatex gr.tex
 
 For files that do not use glossaries, omit `makeglossaries`.
 
-### Run helper scripts
+### 🧬 Run helper scripts
 
 ```bash
 # Find unreferenced images in ./figs and generate rm.sh
@@ -172,14 +174,14 @@ python plot1.py
 python plot2.py
 ```
 
-### Use notebooks
+### 📓 Use notebooks
 
 ```bash
 jupyter notebook
-# Open cosmo.ipynb or schwartzchild.ipynb
+# Open notebooks/cosmo.ipynb or notebooks/schwartzchild.ipynb
 ```
 
-## Configuration
+## 🛠️ Configuration
 
 This repository is intentionally lightweight and mostly file-driven.
 
@@ -189,16 +191,16 @@ This repository is intentionally lightweight and mostly file-driven.
   - `ising1.py`: includes tunable simulation flags (`--m`, `--n`, `--N`, `--T`, `--cool`, `--clamped`, `--seed`, `--figs`, `--show`)
 - No centralized config file currently exists.
 
-## Examples
+## 🧭 Examples
 
-### Example 1: regenerate cosmology scale-factor plots
+### 🪐 Example 1: Regenerate cosmology scale-factor plots
 
 ```bash
 python plot_scale.py
 # writes figs/cosmo-2-a-t and figs/cosmo-2-a-r
 ```
 
-### Example 2: audit and clean unreferenced images
+### 🧹 Example 2: Audit and clean unreferenced images
 
 ```bash
 python audit-images.py --verbose --figs ./figs
@@ -206,7 +208,7 @@ python audit-images.py --verbose --figs ./figs
 bash rm.sh
 ```
 
-### Example 3: build Advanced Quantum Mechanics notes
+### 🧱 Example 3: Build Advanced Quantum Mechanics notes
 
 ```bash
 lualatex aqm.tex
@@ -216,14 +218,14 @@ lualatex aqm.tex
 lualatex aqm.tex
 ```
 
-## Development Notes
+## 📌 Development Notes
 
 - Scope: personal, evolving lecture notes and computational supplements.
 - Build automation is intentionally minimal; commands are run manually.
 - `.gitignore` is LaTeX-focused and excludes typical build artifacts.
 - `figs/` is large; `audit-images.py` is useful for keeping image references tidy.
 
-## Troubleshooting
+## 🛠️ Troubleshooting
 
 - `tikz-feynman` errors: compile with `lualatex` (recommended by source files).
 - Missing glossary entries/output: run `makeglossaries <basename>` between LaTeX passes.
@@ -231,14 +233,14 @@ lualatex aqm.tex
 - Python import errors (`numpy`, `matplotlib`, `pytearcat`): install required packages in your active environment.
 - Notebook kernel mismatch: select the environment where dependencies are installed.
 
-## Roadmap
+## 🗺️ Roadmap
 
 - Add reproducible build automation (for example: `latexmk`/Makefile wrappers per manuscript).
 - Add pinned Python dependency metadata.
 - Populate `i18n/` with translated README variants.
 - Clarify which manuscripts are considered stable/final snapshots.
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome, especially:
 
@@ -257,12 +259,24 @@ git push
 # open a pull request
 ```
 
-## Acknowledgements
+## 🙏 Acknowledgements
+
+Thank you to the creators and maintainers of the tools used here, especially LaTeX, LuaLaTeX, Matplotlib, Jupyter, and pytearcat.
+
+## ❤️ Support
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://camo.githubusercontent.com/24a4914f0b42c6f435f9e101621f1e52535b02c225764b2f6cc99416926004b7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d4c617a79696e674172742d3045413545393f7374796c653d666f722d7468652d6261646765266c6f676f3d6b6f2d6669266c6f676f436f6c6f723d7768697465)](https://chat.lazying.art/donate) | [![PayPal](https://camo.githubusercontent.com/d0f57e8b016517a4b06961b24d0ca87d62fdba16e18bbdb6aba28e978dc0ea21/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617950616c2d526f6e677a686f754368656e2d3030343537433f7374796c653d666f722d7468652d6261646765266c6f676f3d70617970616c266c6f676f436f6c6f723d7768697465)](https://paypal.me/RongzhouChen) | [![Stripe](https://camo.githubusercontent.com/1152dfe04b6943afe3a8d2953676749603fb9f95e24088c92c97a01a897b4942/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374726970652d446f6e6174652d3633354246463f7374796c653d666f722d7468652d6261646765266c6f676f3d737472697065266c6f676f436f6c6f723d7768697465)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
+
+## ⚖️ License
+
+This repository is released under the `CC0-1.0` license. See [`LICENSE`](LICENSE).
 
 - Leonard Susskind and collaborators for *Theoretical Minimum* lectures.
 - Tools used in this project include [TexStudio](https://www.texstudio.org/) and [JabRef](https://www.jabref.org/).
 
-## License
+## ⚖️ License
 
 Repository-level license text is provided in [LICENSE](LICENSE), currently **CC0 1.0 Universal**.
 

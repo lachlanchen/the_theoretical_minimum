@@ -1,9 +1,9 @@
 [English](../README.md) · [العربية](README.ar.md) · [Español](README.es.md) · [Français](README.fr.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Tiếng Việt](README.vi.md) · [中文 (简体)](README.zh-Hans.md) · [中文（繁體）](README.zh-Hant.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/lachlanchen/lachlanchen/main/logos/banner.png" alt="LazyingArt banner" />
-</p>
+[![LazyingArt banner](https://github.com/lachlanchen/lachlanchen/raw/main/figs/banner.png)](https://github.com/lachlanchen/lachlanchen/blob/main/figs/banner.png)
+
+---
 
 # ملاحظاتي لدورات [Theoretical Minimum](http://theoreticalminimum.com/)
 
@@ -13,26 +13,26 @@
 ![Notebooks](https://img.shields.io/badge/Jupyter-Notebooks-F37626)
 ![Status](https://img.shields.io/badge/Project-Document--first-0A7E8C)
 
-## نظرة عامة
+## 🌟 نظرة عامة
 
-هذا المستودع هو بالأساس مشروع ملاحظات فيزياء يعتمد منهج "الوثيقة أولاً"، ومبني حول مخطوطات LaTeX (`*.tex`) ومرجع ببليوغرافي مشترك (`tm.bib`)، مع سكربتات Python ودفاتر Jupyter داعمة للرسوم والتحقق الرمزي.
+هذا المستودع هو في المقام الأول مشروع ملاحظات فيزياء يعتمد على نهج "الوثيقة أولاً" ومبني حول مخطوطات LaTeX (`*.tex`) ومكتبة مرجع مشتركة (`tm.bib`)، مع سكربتات Python ودفاتر Jupyter المساعدة في الرسوم البيانية والتحقق الرمزي.
 
-## ملاحظات محاضرات مبنية على [Theoretical Minimum](http://theoreticalminimum.com/home) لليونارد سسكايند
+## 🎓 ملاحظات المحاضرات من سلسلة [Theoretical Minimum](http://theoreticalminimum.com/home) لليونارد ساسكيند
 
-**إخلاء مسؤولية** أنشأت هذه الملاحظات لتكون تذكيراً شخصياً لنفسي؛ إذا وجدتها مفيدة فأهلاً بك، وسأقدّر أن تخبرني إذا كنت تستخدمها. وهي _ليست_ بديلاً عن متابعة المحاضرات. حقوق الملكية الفكرية لكل المواد المشتقة من المحاضرات تعود بالطبع إلى الأستاذ سسكايند؛ أما الأخطاء، فهي أخطائي أنا.
+**إخلاء مسؤولية** أنشأت هذه الملاحظات كمذكرة مساعدة للاستخدام الشخصي؛ إذا كانت مفيدة لك فأهلاً بك، وسأكون ممتنًا إذا أخبرتني بأنك تستخدمها. وهي ليست بديلاً عن الاستماع إلى المحاضرات. الملكية الفكرية لكل مادة مشتقة من المحاضرات تعود بالطبع للبروفيسور ساسكيند؛ أي أخطاء إن وُجدت فهي من عندي.
 
-تم إعداد الملاحظات باستخدام [TexStudio](https://www.texstudio.org/)، وإدارة المراجع باستخدام [JabRef](https://www.jabref.org/).
+تم إنشاء الملاحظات باستخدام [TexStudio](https://www.texstudio.org/)، وإعداد الببليوغرافيا باستخدام [JabRef](https://www.jabref.org/).
 
-## الميزات
+## ✨ المزايا
 
-- 📚 مخطوطات LaTeX منظّمة حسب المقررات لموضوعات Theoretical Minimum الأساسية.
-- 📖 ببليوغرافيا مركزية (`tm.bib`) مشتركة بين المستندات.
-- 🖼️ مكتبة كبيرة قابلة لإعادة الاستخدام من الأشكال في `figs/`.
-- 🧰 أدوات للمحافظة على نظافة الأشكال وتوليدها (`audit-images.py`, `plot_*.py`, `ising1.py`).
-- 🧮 ملاحق حسابية في دفاتر Jupyter باستخدام `pytearcat`.
-- 🧪 نموذج NetLogo (`Ising.nlogo`) لتصور الجدران المجالّية (domain walls).
+- 📚 مخطوطات LaTeX منظمة حسب المقرر لموضوعات Theoretical Minimum الأساسية.
+- 📖 مرجع ببليوغرافي مركزي (`tm.bib`) يُشارك بين المستندات.
+- 🖼️ مكتبة كبيرة للرسوميات قابلة لإعادة الاستخدام في `figs/`.
+- 🧰 أدوات لتنظيف الرسوميات وتوليدها (`audit-images.py`, `plot_*.py`, `ising1.py`).
+- 🧮 ملحقات حسابية في دفاتر Jupyter باستخدام `pytearcat`.
+- 🧪 نموذج NetLogo (`Ising.nlogo`) لتصور جدران المجال.
 
-## بنية المشروع
+## 🗂️ هيكل المشروع
 
 ```text
 .
@@ -41,23 +41,25 @@
 ├── tm.bib
 ├── figs/
 ├── i18n/
+├── .auto-readme-work/
+├── notebooks/
 ├── *.tex                 # Lecture notes, exercises, glossary, QFT supplements
 ├── *.py                  # Helper utilities and plotting scripts
-├── *.ipynb               # Computational notebooks
+├── notebooks/*.ipynb      # Computational notebooks
 ├── Ising.nlogo
 └── tm.wpr
 ```
 
-## بداية سريعة
+## 🚀 البداية السريعة
 
-| الهدف | الأمر/الأوامر |
+| الهدف | الأوامر |
 |---|---|
 | ترجمة مخطوطة واحدة | `lualatex gr.tex && bibtex gr && makeglossaries gr && lualatex gr.tex && lualatex gr.tex` |
 | إعادة توليد رسوم علم الكونيات | `python plot_scale.py` |
-| فحص الأشكال غير المشار إليها | `python audit-images.py --figs ./figs` |
-| فتح دفاتر الملاحظات | `jupyter notebook` |
+| تدقيق الرسوم غير المرجعية | `python audit-images.py --figs ./figs` |
+| فتح دفاتر Jupyter | `jupyter notebook` |
 
-## فهرس ملاحظات المقررات
+## 📚 فهرس ملاحظات المقررات
 
 | الملف | الوصف |
 |---|---|
@@ -77,49 +79,49 @@
 | `sm.tex` | [Statistical Mechanics](http://theoreticalminimum.com/courses/statistical-mechanics/2013/spring) |
 | `tm.bib` | الببليوغرافيا الخاصة بـ Theoretical Minimum |
 
-## التمارين
+## 🧪 التمارين
 
 | الملف | الوصف |
 |---|---|
 | `gr-exercises.tex` | أمثلة محلولة من [General Relativity](http://theoreticalminimum.com/courses/general-relativity/2012/fall) |
-| `cosmo.ipynb` | استخدام [pytearcat](https://arxiv.org/abs/2106.15016) لحساب موتر أينشتاين لمترية Friedmann-Lemaître-Robertson-Walker |
-| `schwartzchild.ipynb` | استخدام pytearcat لحساب موتر أينشتاين لمترية Schwarzschild |
+| `cosmo.ipynb` | استخدام [pytearcat](https://arxiv.org/abs/2106.15016) لحساب موتر أينشتاين لمقياس Friedmann-Lemaître-Robertson-Walker |
+| `schwartzchild.ipynb` | استخدام pytearcat لحساب موتر أينشتاين لمقياس Schwarzschild |
 
-ملاحظة: أشار نص README سابقاً إلى `schwartzchild.ipnb`؛ الملف الموجود في المستودع هو `schwartzchild.ipynb`.
+ملاحظة: النص السابق في README أشار إلى `schwartzchild.ipnb`؛ الملف الفعلي في المستودع هو `schwartzchild.ipynb`.
 
-## البرامج المساعدة
+## 🧰 البرامج المساعدة
 
 | الملف | الوصف |
 |---|---|
-| `audit-images.py` | يُستخدم لتحديد ملفات الصور غير المشار إليها وإنشاء `rm.sh` بأوامر `git rm` |
-| `ising1.py` | استكشاف كسر التناظر من المحاضرة 7 باستخدام نموذج Ising أحادي البعد |
-| `Ising.nlogo` | عرض توضيحي للجدران المجالّية (domain walls) |
-| `plot-quartic.py` | يُستخدم لرسم شكل Mexican hat الخاص ببوزون Higgs |
-| `plot_scale.py` | يُستخدم لرسم منحنيات معامل التمدد في علم الكونيات |
-| `plot1.py` | أداة مساعدة للتصور بأسلوب سطح ريمان (مقتبسة من gist مرتبط في المصدر) |
-| `plot2.py` | نسخة بديلة من أداة التصور `plot1.py` |
+| `audit-images.py` | يُستخدم لتحديد ملفات الصور غير المرجعية وإنشاء `rm.sh` يتضمن أوامر `git rm` |
+| `ising1.py` | استكشاف كسر التناظر من المحاضرة السابعة باستخدام نموذج Ising أحادي البعد |
+| `Ising.nlogo` | عرض توضيحي لجدران المجال |
+| `plot-quartic.py` | يستخدم لرسم شكل "القبعة المكسيكية" لهiggs boson |
+| `plot_scale.py` | يستخدم لرسم منحنيات معامل التوسع في علم الكونيات |
+| `plot1.py` | أداة مساعدة للتصور بنمط سطح ريمان (مستوحاة من gist في المصدر) |
+| `plot2.py` | نسخة بديلة لأداة التصور `plot1.py` |
 | `template.py` | قالب لبرامج Python |
 | `tm.wpr` | مشروع Wing IDE لملفات المساعدة |
 
-## براهين مكمّلة لكتاب *QFT in a Nutshell*
+## 📐 براهين مكمّلة لكتاب *QFT in a Nutshell*
 
 | الملف | الوصف |
 |---|---|
-| `qft1.tex` | Motivation and Foundation |
-| `qft2.tex` | Dirac and the Spinor |
+| `qft1.tex` | الدافع والأساسيات |
+| `qft2.tex` | Dirac والـ Spinor |
 
-## المتطلبات المسبقة
+## ✅ المتطلبات المسبقة
 
-- توزيعة LaTeX تتضمن أدوات `lualatex` وBibTeX.
-- أداة `makeglossaries` للمستندات التي تستخدم مدخلات المسرد.
+- توزيعة LaTeX تتضمن `lualatex` وأدوات BibTeX.
+- `makeglossaries` للمستندات التي تستخدم مدخلات مسرد.
 - Python 3 مع `numpy` و`matplotlib` للسكربتات المساعدة.
 - Jupyter Notebook/Lab لملفات `.ipynb`.
 - `pytearcat` لسير عمل دفاتر علم الكونيات/Schwarzschild.
 - اختياري: [TexStudio](https://www.texstudio.org/) و[JabRef](https://www.jabref.org/).
 
-## التثبيت
+## 🧱 التثبيت
 
-لا يوجد حالياً ملف مدير حزم (`requirements.txt`, `pyproject.toml`, إلخ)، لذلك يتم الإعداد يدوياً.
+لا يوجد ملف مدير حزم حاليًا (`requirements.txt` و`pyproject.toml` وغير ذلك غير موجودة)، لذلك يتم الإعداد يدويًا.
 
 ```bash
 # 1) Clone
@@ -132,18 +134,18 @@ source .venv/bin/activate
 pip install numpy matplotlib jupyter pytearcat
 ```
 
-إذا كانت توزيعة TeX لديك تفتقد بعض المكوّنات، فقم بتثبيت الحزم الخاصة بـ:
+إذا كانت توزيعة TeX لديك تفتقد مكونات معيّنة، ثبّت الحزم:
 
 - `tikz-feynman`
 - `glossaries` / `glossaries-extra`
 - `thmtools`
 - `pgfplots`
 
-## الاستخدام
+## 🧭 الاستخدام
 
-### ترجمة ملاحظات المحاضرات (LaTeX)
+### 🧪 ترجمة ملاحظات المحاضرات (LaTeX)
 
-تحدد العديد من الملفات المصدر LuaLaTeX صراحة (`% !TeX program = lualatex`). تسلسل بناء عام:
+تحدد العديد من الملفات المصدر LuaLaTeX صراحةً (`% !TeX program = lualatex`). تسلسل بناء عام هو:
 
 ```bash
 # Example: General Relativity notes
@@ -156,7 +158,7 @@ lualatex gr.tex
 
 بالنسبة للملفات التي لا تستخدم المسارد، احذف خطوة `makeglossaries`.
 
-### تشغيل السكربتات المساعدة
+### 🧬 تشغيل السكربتات المساعدة
 
 ```bash
 # Find unreferenced images in ./figs and generate rm.sh
@@ -172,33 +174,33 @@ python plot1.py
 python plot2.py
 ```
 
-### استخدام الدفاتر
+### 📓 استخدام دفاتر Jupyter
 
 ```bash
 jupyter notebook
-# Open cosmo.ipynb or schwartzchild.ipynb
+# Open notebooks/cosmo.ipynb or notebooks/schwartzchild.ipynb
 ```
 
-## الإعداد
+## 🛠️ الإعداد
 
-هذا المستودع خفيف عمداً ويعتمد في الغالب على تنظيم الملفات.
+هذا المستودع خفيف الوزن عمدًا ومعتمد أساسًا على الملفات.
 
-- اصطلاحات مسار الأشكال تعتمد على `figs/` وعلى `\graphicspath{{figs/}}` داخل ملفات TeX.
-- القيم الافتراضية للسكربتات:
+- تتبع مسارات الرسوميات يعتمد على `figs/` وعلى `\graphicspath{{figs/}}` في ملفات TeX.
+- إعدادات افتراضية للسكربتات:
   - `audit-images.py`: `--figs ./figs`
-  - `ising1.py`: يتضمن خيارات محاكاة قابلة للضبط (`--m`, `--n`, `--N`, `--T`, `--cool`, `--clamped`, `--seed`, `--figs`, `--show`)
-- لا يوجد حالياً ملف إعداد مركزي.
+  - `ising1.py`: تشمل خيارات ضبط للمحاكاة (`--m`, `--n`, `--N`, `--T`, `--cool`, `--clamped`, `--seed`, `--figs`, `--show`)
+- لا يوجد حتى الآن ملف إعداد مركزي.
 
-## أمثلة
+## 🧭 أمثلة
 
-### المثال 1: إعادة توليد رسوم معامل التمدد في علم الكونيات
+### 🪐 المثال 1: إعادة توليد رسوم عامل المقياس في علم الكونيات
 
 ```bash
 python plot_scale.py
 # writes figs/cosmo-2-a-t and figs/cosmo-2-a-r
 ```
 
-### المثال 2: فحص وتنظيف الصور غير المشار إليها
+### 🧹 المثال 2: فحص وتنظيف الصور غير المرجعية
 
 ```bash
 python audit-images.py --verbose --figs ./figs
@@ -206,7 +208,7 @@ python audit-images.py --verbose --figs ./figs
 bash rm.sh
 ```
 
-### المثال 3: بناء ملاحظات Advanced Quantum Mechanics
+### 🧱 المثال 3: بناء ملاحظات Advanced Quantum Mechanics
 
 ```bash
 lualatex aqm.tex
@@ -216,38 +218,38 @@ lualatex aqm.tex
 lualatex aqm.tex
 ```
 
-## ملاحظات التطوير
+## 📌 ملاحظات التطوير
 
-- النطاق: ملاحظات محاضرات شخصية ومتطورة باستمرار مع ملاحق حسابية.
-- أتمتة البناء محدودة عمداً؛ يتم تشغيل الأوامر يدوياً.
-- ملف `.gitignore` يركز على LaTeX ويستثني نواتج البناء الشائعة.
-- مجلد `figs/` كبير؛ أداة `audit-images.py` مفيدة للحفاظ على تنظيم مراجع الصور.
+- النطاق: ملاحظات محاضرات شخصية تتطور باستمرار.
+- أتمتة البناء مقصودة لتكون بسيطة؛ تُشغَّل الأوامر يدويًا.
+- ملف `.gitignore` موجه إلى LaTeX ويستبعد مخلفات البناء الشائعة.
+- مجلد `figs/` كبير؛ ولذلك يكون `audit-images.py` مفيدًا لتنظيف مراجع الصور.
 
-## استكشاف الأخطاء وإصلاحها
+## 🛠️ استكشاف الأخطاء وإصلاحها
 
-- أخطاء `tikz-feynman`: قم بالترجمة باستخدام `lualatex` (كما توصي به ملفات المصدر).
-- غياب مدخلات/مخرجات المسرد: شغّل `makeglossaries <basename>` بين تمريرات LaTeX.
-- غياب مراجع الببليوغرافيا: تأكد من تشغيل `bibtex <basename>` ومن وجود `tm.bib`.
+- أخطاء `tikz-feynman`: اجعل الترجمة باستخدام `lualatex` (موصى به في ملفات المصدر).
+- نقص مداخل/مخرجات المسرد: شغّل `makeglossaries <basename>` بين تمريرتي LaTeX.
+- مراجع ببليوغرافية مفقودة: تأكد من تشغيل `bibtex <basename>` وتواجد `tm.bib`.
 - أخطاء استيراد Python (`numpy`, `matplotlib`, `pytearcat`): ثبّت الحزم المطلوبة في البيئة النشطة.
 - عدم تطابق نواة الدفتر: اختر البيئة التي ثُبّتت فيها الاعتماديات.
 
-## خارطة الطريق
+## 🗺️ خارطة الطريق
 
-- إضافة أتمتة بناء قابلة لإعادة الإنتاج (مثلاً: أغلفة `latexmk`/Makefile لكل مخطوطة).
-- إضافة بيانات اعتماديات Python مُثبتة الإصدارات.
-- تعبئة `i18n/` بنسخ README مترجمة.
-- توضيح المخطوطات التي تُعد لقطات مستقرة/نهائية.
+- إضافة أتمتة بناء قابلة لإعادة الإنتاج (على سبيل المثال: أغلفة `latexmk`/Makefile لكل مخطوطة).
+- إضافة بيانات اعتماديات Python مثبتة النسخ.
+- ملء `i18n/` بنسخ README مترجمة.
+- توضيح أي المخطوطات تُعتبر لقطات مستقرة/نهائية.
 
-## المساهمة
+## 🤝 المساهمة
 
-المساهمات مرحب بها، خاصة:
+المساهمات مرحب بها، خصوصًا:
 
-- تصحيحات الأخطاء المطبعية وأخطاء المعادلات/الترميز.
+- تصحيحات مطبعية وأخطاء المعادلات/الترميز.
 - إصلاح الروابط المكسورة وتنظيف المراجع.
 - تحسينات البناء/التوثيق.
-- تحسين قابلية إعادة إنتاج الأشكال/السكربتات.
+- تحسينات قابلية إعادة إنتاج الرسوم/السكربتات.
 
-سير عمل مقترح:
+النهج المقترح:
 
 ```bash
 git checkout -b docs/<topic>
@@ -257,13 +259,27 @@ git push
 # open a pull request
 ```
 
-## الشكر والتقدير
+## 🙏 الشكر والتقدير
 
-- ليونارد سسكايند والمتعاونون معه على محاضرات *Theoretical Minimum*.
-- من الأدوات المستخدمة في هذا المشروع: [TexStudio](https://www.texstudio.org/) و[JabRef](https://www.jabref.org/).
+- أستاذ ليونارد ساسكيند والمتعاونون على محاضرات *Theoretical Minimum*.
+- الأدوات المستخدمة في هذا المشروع تشمل [TexStudio](https://www.texstudio.org/) و[JabRef](https://www.jabref.org/).
 
-## الترخيص
+## ⚖️ الترخيص
 
-نص الترخيص على مستوى المستودع موجود في [LICENSE](../LICENSE)، وهو حالياً **CC0 1.0 Universal**.
+هذا المستودع مرخّص تحت رخصة `CC0-1.0`. راجع [LICENSE](../LICENSE).
 
-ملاحظة: تتضمن بعض ملفات المصدر الفردية ترويسات حقوق نشر/ترخيص خاصة بها. حافظ على هذه الإشعارات عند إعادة استخدام الكود.
+- أستاذ ليونارد ساسكيند والمتعاونون على محاضرات *Theoretical Minimum*.
+- الأدوات المستخدمة في هذا المشروع تشمل [TexStudio](https://www.texstudio.org/) و[JabRef](https://www.jabref.org/).
+
+## ⚖️ الترخيص
+
+نص الترخيص على مستوى المستودع موجود في [LICENSE](../LICENSE)، وهو حاليًا **CC0 1.0 Universal**.
+
+ملاحظة: تتضمن بعض ملفات المصدر الفردية ترويسات حقوق نشر/ترخيص خاصة بها. احتفظ بهذه الإشعارات عند إعادة استخدام الكود.
+
+
+## ❤️ Support
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://camo.githubusercontent.com/24a4914f0b42c6f435f9e101621f1e52535b02c225764b2f6cc99416926004b7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d4c617a79696e674172742d3045413545393f7374796c653d666f722d7468652d6261646765266c6f676f3d6b6f2d6669266c6f676f436f6c6f723d7768697465)](https://chat.lazying.art/donate) | [![PayPal](https://camo.githubusercontent.com/d0f57e8b016517a4b06961b24d0ca87d62fdba16e18bbdb6aba28e978dc0ea21/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617950616c2d526f6e677a686f754368656e2d3030343537433f7374796c653d666f722d7468652d6261646765266c6f676f3d70617970616c266c6f676f436f6c6f723d7768697465)](https://paypal.me/RongzhouChen) | [![Stripe](https://camo.githubusercontent.com/1152dfe04b6943afe3a8d2953676749603fb9f95e24088c92c97a01a897b4942/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374726970652d446f6e6174652d3633354246463f7374796c653d666f722d7468652d6261646765266c6f676f3d737472697065266c6f676f436f6c6f723d7768697465)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |

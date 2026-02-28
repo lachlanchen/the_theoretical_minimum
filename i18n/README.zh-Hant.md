@@ -1,38 +1,38 @@
 [English](../README.md) · [العربية](README.ar.md) · [Español](README.es.md) · [Français](README.fr.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Tiếng Việt](README.vi.md) · [中文 (简体)](README.zh-Hans.md) · [中文（繁體）](README.zh-Hant.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/lachlanchen/lachlanchen/main/logos/banner.png" alt="LazyingArt banner" />
-</p>
+[![LazyingArt banner](https://github.com/lachlanchen/lachlanchen/raw/main/figs/banner.png)](https://github.com/lachlanchen/lachlanchen/blob/main/figs/banner.png)
 
-# 我的 [Theoretical Minimum Courses](http://theoreticalminimum.com/) 筆記
+---
 
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](LICENSE)
+# 我為 [Theoretical Minimum Courses](http://theoreticalminimum.com/) 所寫的筆記
+
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](../LICENSE)
 ![LaTeX](https://img.shields.io/badge/LaTeX-LuaLaTeX-008080)
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB)
 ![Notebooks](https://img.shields.io/badge/Jupyter-Notebooks-F37626)
 ![Status](https://img.shields.io/badge/Project-Document--first-0A7E8C)
 
-## 概覽
+## 🌟 概覽
 
-這個儲存庫主要是一個以文件為核心（document-first）的物理學筆記專案，圍繞 LaTeX 手稿（`*.tex`）與共用參考文獻庫（`tm.bib`）建構，並搭配 Python 腳本與筆記本用於繪圖與符號檢查。
+此專案主要是以文件為優先的物理筆記專案，核心為 LaTeX 手稿（`*.tex`）與共用書目資料庫（`tm.bib`），並輔以用於繪圖與符號檢查的 Python 腳本與 notebooks。
 
-## 基於 Leonard Susskind [Theoretical Minimum](http://theoreticalminimum.com/home) 的課程筆記
+## 🎓 來自 Leonard Susskind 的 [Theoretical Minimum](http://theoreticalminimum.com/home) 課程筆記
 
-**聲明**：這些筆記是我為了自己使用而整理的備忘；如果你覺得有幫助，歡迎使用，但若能告知我你正在使用會很感謝。這些筆記_不_是用來取代實際聽課。凡由課程衍生的內容，其智慧財產權當然屬於 Susskind 教授；其中若有錯誤，則由我自行負責。
+**免責聲明**：我建立這些筆記是為了個人使用的備忘；若你覺得有幫助，歡迎使用，但若你確實使用，請讓我知道。這些筆記**不**作為聆聽課程的替代教材。從課程內容衍生的智慧財產權當然歸 Susskind 教授所有；然而任何錯誤都由我本人負責。
 
-筆記使用 [TexStudio](https://www.texstudio.org/) 撰寫，文獻庫使用 [JabRef](https://www.jabref.org/) 管理。
+這些筆記使用 [TexStudio](https://www.texstudio.org/) 製作，書目則由 [JabRef](https://www.jabref.org/) 管理。
 
-## 特色
+## ✨ 功能
 
-- 📚 依課程主題組織的 LaTeX 手稿，涵蓋 Theoretical Minimum 核心內容。
-- 📖 跨文件共用的中心文獻庫（`tm.bib`）。
-- 🖼️ 位於 `figs/` 的大型可重用圖庫。
-- 🧰 圖像整理與生成工具（`audit-images.py`, `plot_*.py`, `ising1.py`）。
-- 🧮 使用 `pytearcat` 的 Jupyter 筆記本作為計算補充。
-- 🧪 用於領域壁（domain wall）可視化的 NetLogo 模型（`Ising.nlogo`）。
+- 📚 以課程主題組織的 LaTeX 手稿，涵蓋 Theoretical Minimum 的核心主題。
+- 📖 全域共用的中心書目（`tm.bib`），跨文件使用。
+- 🖼️ `figs/` 目錄中的大型可重複使用圖庫。
+- 🧰 圖片清理與圖形生成工具（`audit-images.py`、`plot_*.py`、`ising1.py`）。
+- 🧮 使用 `pytearcat` 的 Jupyter notebook 計算補充資料。
+- 🧪 用於磁區牆可視化的 NetLogo 模型（`Ising.nlogo`）。
 
-## 專案結構
+## 🗂️ 專案結構
 
 ```text
 .
@@ -41,23 +41,25 @@
 ├── tm.bib
 ├── figs/
 ├── i18n/
+├── .auto-readme-work/
+├── notebooks/
 ├── *.tex                 # Lecture notes, exercises, glossary, QFT supplements
 ├── *.py                  # Helper utilities and plotting scripts
-├── *.ipynb               # Computational notebooks
+├── notebooks/*.ipynb      # Computational notebooks
 ├── Ising.nlogo
 └── tm.wpr
 ```
 
-## 快速開始
+## 🚀 快速上手
 
-| 目標 | 指令 |
+| 目標 | 命令 |
 |---|---|
 | 編譯單一手稿 | `lualatex gr.tex && bibtex gr && makeglossaries gr && lualatex gr.tex && lualatex gr.tex` |
-| 重新產生宇宙學圖表 | `python plot_scale.py` |
-| 稽核未被引用的圖片 | `python audit-images.py --figs ./figs` |
-| 開啟筆記本 | `jupyter notebook` |
+| 重新生成宇宙學圖表 | `python plot_scale.py` |
+| 審查未被參照的圖檔 | `python audit-images.py --figs ./figs` |
+| 開啟 notebooks | `jupyter notebook` |
 
-## 課程筆記索引
+## 📚 課程筆記索引
 
 | 檔案 | 說明 |
 |---|---|
@@ -65,7 +67,7 @@
 | `entanglement.tex` | [Quantum Entanglement](http://theoreticalminimum.com/courses/quantum-entanglement/2006/fall) |
 | `cosmology.tex` | [Cosmology](http://theoreticalminimum.com/courses/cosmology/2013/winter) |
 | `gr.tex` | [General Relativity](http://theoreticalminimum.com/courses/general-relativity/2012/fall) |
-| `gr-misc.tex` | 雜項講次 |
+| `gr-misc.tex` | 補充講座 |
 | `-` | [Inside Black Holes](https://www.youtube.com/watch?v=yMRYZMv0jRE) |
 | `-` | [The World as Hologram](https://www.youtube.com/watch?v=2DIl3Hfh9tY) |
 | `-` | [Complexity and Gravity](https://youtu.be/6OXdhV5BOcY?t=797) |
@@ -75,51 +77,51 @@
 | `particles2.tex` | [Particle Physics 2: Standard Model](http://theoreticalminimum.com/courses/particle-physics-2-standard-model/2010/winter) |
 | `particles3.tex` | [Particle Physics 3: Supersymmetry and Grand Unification](http://theoreticalminimum.com/courses/particle-physics-3-supersymmetry-and-grand-unification/2010/spring/lecture-1) |
 | `sm.tex` | [Statistical Mechanics](http://theoreticalminimum.com/courses/statistical-mechanics/2013/spring) |
-| `tm.bib` | Theoretical Minimum 的文獻庫 |
+| `tm.bib` | Theoretical Minimum 書目 |
 
-## 練習
-
-| 檔案 | 說明 |
-|---|---|
-| `gr-exercises.tex` | [General Relativity](http://theoreticalminimum.com/courses/general-relativity/2012/fall) 的範例解題 |
-| `cosmo.ipynb` | 使用 [pytearcat](https://arxiv.org/abs/2106.15016) 計算 Friedmann-Lemaître-Robertson-Walker 度規的 Einstein tensor |
-| `schwartzchild.ipynb` | 使用 pytearcat 計算 Schwarzschild 度規的 Einstein tensor |
-
-注意：較早版本的 README 曾寫成 `schwartzchild.ipnb`；儲存庫中的檔案為 `schwartzchild.ipynb`。
-
-## 輔助程式
+## 🧪 練習題
 
 | 檔案 | 說明 |
 |---|---|
-| `audit-images.py` | 用於找出未被引用的圖片檔，並輸出含 `git rm` 指令的 `rm.sh` |
-| `ising1.py` | 使用一維 Ising 模型探索第 7 講中的對稱性破缺 |
-| `Ising.nlogo` | 領域壁示範 |
-| `plot-quartic.py` | 用於繪製 Higgs boson 的 Mexican hat |
-| `plot_scale.py` | 用於繪製宇宙學尺度參數曲線 |
-| `plot1.py` | Riemann 曲面風格視覺化輔助（改寫自原始碼中連結的 gist） |
-| `plot2.py` | `plot1.py` 視覺化輔助的另一版本 |
-| `template.py` | Python 程式範本 |
-| `tm.wpr` | 輔助檔案使用的 Wing IDE 專案 |
+| `gr-exercises.tex` | [General Relativity](http://theoreticalminimum.com/courses/general-relativity/2012/fall) 的習題示例 |
+| `cosmo.ipynb` | 使用 [pytearcat](https://arxiv.org/abs/2106.15016) 為 Friedmann-Lemaître-Robertson-Walker 度規計算愛因斯坦張量 |
+| `schwartzchild.ipynb` | 使用 pytearcat 為 Schwarzschild 度規計算愛因斯坦張量 |
 
-## 補充 *QFT in a Nutshell* 的證明
+註：較早期的 README 文字提及 `schwartzchild.ipnb`；本專案實際檔案為 `schwartzchild.ipynb`。
+
+## 🧰 輔助程式
 
 | 檔案 | 說明 |
 |---|---|
-| `qft1.tex` | Motivation and Foundation |
-| `qft2.tex` | Dirac and the Spinor |
+| `audit-images.py` | 用來找出未被引用的圖片，並產生含 `git rm` 指令的 `rm.sh` |
+| `ising1.py` | 使用一維 Ising 模型，從第 7 講探索自發對稱性破缺 |
+| `Ising.nlogo` | 磁區壁展示 |
+| `plot-quartic.py` | 用於繪製 Higgs 玻色子 Mexican hat 势阱 |
+| `plot_scale.py` | 用於繪製宇宙學尺度因子曲線 |
+| `plot1.py` | Riemann 曲面風格可視化輔助工具（改編自原始碼連結中的 gist） |
+| `plot2.py` | `plot1.py` 視覺化輔助工具的替代版本 |
+| `template.py` | Python 程式模板 |
+| `tm.wpr` | 輔助檔案的 Wing IDE 專案 |
 
-## 先備需求
+## 📐 補充 *QFT in a Nutshell* 的證明
 
-- 具備 `lualatex` 與 BibTeX 工具鏈的 LaTeX 發行版。
-- 對使用術語表的文件，需要 `makeglossaries`。
-- Python 3，以及供輔助腳本使用的 `numpy`、`matplotlib`。
-- 用於 `.ipynb` 檔案的 Jupyter Notebook/Lab。
-- 用於宇宙學/Schwarzschild 筆記本流程的 `pytearcat`。
-- 選配：[TexStudio](https://www.texstudio.org/) 與 [JabRef](https://www.jabref.org/)。
+| 檔案 | 說明 |
+|---|---|
+| `qft1.tex` | 動機與基礎 |
+| `qft2.tex` | Dirac 與旋量 |
 
-## 安裝
+## ✅ 前置條件
 
-目前沒有提供套件管理檔（`requirements.txt`、`pyproject.toml` 等不存在），因此需手動設定。
+- 具備包含 `lualatex` 與 BibTeX 工具鏈的 LaTeX 發行版。
+- 需要術語表條目的文件，請安裝 `makeglossaries`。
+- Python 3，需安裝 `numpy` 與 `matplotlib` 以供輔助腳本使用。
+- Jupyter Notebook/Lab 可開啟 `.ipynb` 檔案。
+- 用於宇宙學 / Schwarzschild notebooks 流程的 `pytearcat`。
+- 可選： [TexStudio](https://www.texstudio.org/) 與 [JabRef](https://www.jabref.org/)。
+
+## 🧱 安裝
+
+目前未提供套件管理檔（`requirements.txt`、`pyproject.toml` 等皆未提供），因此請採用手動設定。
 
 ```bash
 # 1) Clone
@@ -132,18 +134,18 @@ source .venv/bin/activate
 pip install numpy matplotlib jupyter pytearcat
 ```
 
-若你的 TeX 發行版缺少元件，請安裝以下套件：
+如果你的 TeX 發行版缺少元件，請安裝以下套件：
 
 - `tikz-feynman`
 - `glossaries` / `glossaries-extra`
 - `thmtools`
 - `pgfplots`
 
-## 使用方式
+## 🧭 使用方式
 
-### 編譯課程筆記（LaTeX）
+### 🧪 編譯講義（LaTeX）
 
-許多來源檔明確指定 LuaLaTeX（`% !TeX program = lualatex`）。一般建置流程如下：
+許多原始檔明確指定 LuaLaTeX（`% !TeX program = lualatex`）。一般建置流程如下：
 
 ```bash
 # Example: General Relativity notes
@@ -154,9 +156,9 @@ lualatex gr.tex
 lualatex gr.tex
 ```
 
-對不使用術語表的檔案，可省略 `makeglossaries`。
+若檔案未使用術語表，請省略 `makeglossaries`。
 
-### 執行輔助腳本
+### 🧬 執行輔助腳本
 
 ```bash
 # Find unreferenced images in ./figs and generate rm.sh
@@ -172,33 +174,33 @@ python plot1.py
 python plot2.py
 ```
 
-### 使用筆記本
+### 📓 使用 notebooks
 
 ```bash
 jupyter notebook
-# Open cosmo.ipynb or schwartzchild.ipynb
+# Open notebooks/cosmo.ipynb or notebooks/schwartzchild.ipynb
 ```
 
-## 設定
+## 🛠️ 設定
 
-本儲存庫刻意維持輕量，且主要由檔案驅動。
+此專案有意維持輕量，主要採文件驅動方式。
 
-- 圖片路徑慣例基於 `figs/`，以及 TeX 檔中的 `\graphicspath{{figs/}}`。
-- 腳本預設值：
-  - `audit-images.py`: `--figs ./figs`
-  - `ising1.py`: 包含可調整的模擬旗標（`--m`, `--n`, `--N`, `--T`, `--cool`, `--clamped`, `--seed`, `--figs`, `--show`）
-- 目前沒有集中式設定檔。
+- 圖片路徑約定基於 `figs/` 與 TeX 檔案中的 `\\graphicspath{{figs/}}`。
+- 腳本預設參數：
+  - `audit-images.py`：`--figs ./figs`
+  - `ising1.py`：可調參數包括（`--m`、`--n`、`--N`、`--T`、`--cool`、`--clamped`、`--seed`、`--figs`、`--show`）
+- 目前仍沒有集中式設定檔。
 
-## 範例
+## 🧭 範例
 
-### 範例 1：重新產生宇宙學尺度因子圖
+### 🪐 範例 1：重新生成宇宙學尺度因子圖
 
 ```bash
 python plot_scale.py
 # writes figs/cosmo-2-a-t and figs/cosmo-2-a-r
 ```
 
-### 範例 2：稽核並清理未引用圖片
+### 🧹 範例 2：盤點並清理未被參照的圖片
 
 ```bash
 python audit-images.py --verbose --figs ./figs
@@ -206,7 +208,7 @@ python audit-images.py --verbose --figs ./figs
 bash rm.sh
 ```
 
-### 範例 3：建置 Advanced Quantum Mechanics 筆記
+### 🧱 範例 3：建立 Advanced Quantum Mechanics 講義
 
 ```bash
 lualatex aqm.tex
@@ -216,38 +218,38 @@ lualatex aqm.tex
 lualatex aqm.tex
 ```
 
-## 開發備註
+## 📌 開發說明
 
-- 範圍：個人使用、持續演進的課程筆記與計算補充內容。
-- 建置自動化刻意維持最小化；指令以手動執行為主。
-- `.gitignore` 以 LaTeX 為主，排除常見建置產物。
-- `figs/` 體積較大；`audit-images.py` 有助於維持圖片引用整潔。
+- 範圍：個人的、持續演化的講義與計算補充內容。
+- 建置自動化刻意保持極簡，指令通常以手動執行為主。
+- `.gitignore` 偏向 LaTeX 用途，並排除常見建置產物。
+- `figs/` 較大，`audit-images.py` 有助於維持圖片參照整理。
 
-## 疑難排解
+## 🛠️ 疑難排解
 
-- `tikz-feynman` 錯誤：請用 `lualatex` 編譯（來源檔也建議如此）。
-- 缺少術語表條目/輸出：在 LaTeX 多輪編譯間執行 `makeglossaries <basename>`。
-- 缺少參考文獻引用：確認已執行 `bibtex <basename>` 且 `tm.bib` 存在。
-- Python 匯入錯誤（`numpy`, `matplotlib`, `pytearcat`）：在目前啟用環境安裝所需套件。
-- 筆記本 kernel 不一致：選擇已安裝相依套件的環境。
+- `tikz-feynman` 錯誤：請以 `lualatex` 重新編譯（由原始檔建議）。
+- 術語表條目或輸出遺失：在兩次 LaTeX 編譯間執行 `makeglossaries <basename>`。
+- 參考文獻缺漏：確認已執行 `bibtex <basename>` 並且存在 `tm.bib`。
+- Python 匯入錯誤（`numpy`、`matplotlib`、`pytearcat`）：請在啟用的環境中安裝必要套件。
+- Notebook 核心不一致：請切換到已安裝相依套件的環境。
 
-## 路線圖
+## 🗺️ 路線圖
 
-- 加入可重現建置自動化（例如各手稿的 `latexmk`/Makefile 包裝）。
-- 加入已固定版本的 Python 相依資訊。
-- 在 `i18n/` 補齊 README 各語言翻譯版本。
-- 釐清哪些手稿屬於穩定/最終快照。
+- 新增可重現的建置自動化（例如：每份手稿一組 `latexmk`/Makefile 包裝）。
+- 補齊並鎖定 Python 相依性版本資訊。
+- 充實 `i18n/` 的 README 語言版本。
+- 說明哪些手稿可視為穩定／最終快照版本。
 
-## 貢獻
+## 🤝 貢獻
 
-歡迎貢獻，特別是：
+歡迎提交貢獻，特別是：
 
-- 錯字與公式/記號修正。
-- 失效連結與參考清理。
-- 建置/文件改進。
-- 圖片/腳本可重現性改進。
+- 拼字修正與公式/符號修正。
+- 斷鏈接修復與參考資料清理。
+- 建置與文件改進。
+- 提升圖像與腳本的可重現性。
 
-建議流程：
+建議流程如下：
 
 ```bash
 git checkout -b docs/<topic>
@@ -257,13 +259,25 @@ git push
 # open a pull request
 ```
 
-## 致謝
+## 🙏 感謝
 
-- Leonard Susskind 與其合作者提供 *Theoretical Minimum* 系列課程。
+感謝本專案所使用工具的作者與維護者，特別是 LaTeX、LuaLaTeX、Matplotlib、Jupyter 與 pytearcat。
+
+## ⚖️ 授權
+
+本專案採用 `CC0-1.0` 授權條款，詳見 [`LICENSE`](../LICENSE)。
+
+- Leonard Susskind 與其合作者的 *Theoretical Minimum* 課程。
 - 本專案使用的工具包括 [TexStudio](https://www.texstudio.org/) 與 [JabRef](https://www.jabref.org/)。
 
-## 授權
+## ❤️ Support
 
-儲存庫層級授權條文位於 [LICENSE](LICENSE)，目前為 **CC0 1.0 Universal**。
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://camo.githubusercontent.com/24a4914f0b42c6f435f9e101621f1e52535b02c225764b2f6cc99416926004b7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d4c617a79696e674172742d3045413545393f7374796c653d666f722d7468652d6261646765266c6f676f3d6b6f2d6669266c6f676f436f6c6f723d7768697465)](https://chat.lazying.art/donate) | [![PayPal](https://camo.githubusercontent.com/d0f57e8b016517a4b06961b24d0ca87d62fdba16e18bbdb6aba28e978dc0ea21/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617950616c2d526f6e677a686f754368656e2d3030343537433f7374796c653d666f722d7468652d6261646765266c6f676f3d70617970616c266c6f676f436f6c6f723d7768697465)](https://paypal.me/RongzhouChen) | [![Stripe](https://camo.githubusercontent.com/1152dfe04b6943afe3a8d2953676749603fb9f95e24088c92c97a01a897b4942/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374726970652d446f6e6174652d3633354246463f7374796c653d666f722d7468652d6261646765266c6f676f3d737472697065266c6f676f436f6c6f723d7768697465)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
 
-注意：部分個別原始檔包含其自身的版權/授權標頭。重用程式碼時請保留這些聲明。
+## ⚖️ License
+
+Repository-level license text is provided in [LICENSE](../LICENSE), currently **CC0 1.0 Universal**.
+
+Note: some individual source files include their own copyright/license headers. Preserve those notices when reusing code.

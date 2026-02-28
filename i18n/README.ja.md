@@ -1,38 +1,38 @@
 [English](../README.md) · [العربية](README.ar.md) · [Español](README.es.md) · [Français](README.fr.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Tiếng Việt](README.vi.md) · [中文 (简体)](README.zh-Hans.md) · [中文（繁體）](README.zh-Hant.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/lachlanchen/lachlanchen/main/logos/banner.png" alt="LazyingArt banner" />
-</p>
+[![LazyingArt banner](https://github.com/lachlanchen/lachlanchen/raw/main/figs/banner.png)](https://github.com/lachlanchen/lachlanchen/blob/main/figs/banner.png)
+
+---
 
 # [Theoretical Minimum Courses](http://theoreticalminimum.com/) のための私のノート
 
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](../LICENSE)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](LICENSE)
 ![LaTeX](https://img.shields.io/badge/LaTeX-LuaLaTeX-008080)
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB)
 ![Notebooks](https://img.shields.io/badge/Jupyter-Notebooks-F37626)
 ![Status](https://img.shields.io/badge/Project-Document--first-0A7E8C)
 
-## 概要
+## 🌟 概要
 
-このリポジトリは、主に LaTeX 原稿（`*.tex`）と共通参考文献（`tm.bib`）を中心に構成した、ドキュメントファーストの物理ノートプロジェクトです。図の作成や記号計算の確認を補助するために、Python スクリプトとノートブックも含まれています。
+このリポジトリは、LaTeX 原稿（`*.tex`）と共通の参考文献データベース（`tm.bib`）を中心に構築された、ドキュメント主導の物理学ノート集です。図生成と記号計算チェックを補助する Python スクリプトやノートブックも併用しています。
 
-## Leonard Susskind の [Theoretical Minimum](http://theoreticalminimum.com/home) に基づく講義ノート
+## 🎓 レナード・サスキンド（Leonard Susskind）《[Theoretical Minimum](http://theoreticalminimum.com/home)》の講義ノート
 
-**免責事項** これらのノートは、私自身の備忘録として作成したものです。役に立った場合は自由に使っていただいて構いませんが、利用していることを知らせてもらえると嬉しいです。これらは講義視聴の代替を意図したものではありません。講義由来の内容に関する知的財産は当然ながら Susskind 教授に帰属します。一方、誤りがあればそれは私の責任です。
+**免責事項** これらのノートは私自身の補助メモとして作成したものです。役に立つと感じていただけるなら歓迎しますが、使用する場合は知らせていただけると助かります。これらは講義を聞くことの代替になることを意図していません。すべての講義由来の知的財産権はもちろん Susskind 教授に帰属しますが、誤りは私の責任です。
 
-ノートの作成には [TexStudio](https://www.texstudio.org/) を、参考文献管理には [JabRef](https://www.jabref.org/) を使用しています。
+このノートは [TexStudio](https://www.texstudio.org/) で作成され、参考文献管理は [JabRef](https://www.jabref.org/) で行いました。
 
-## 特徴
+## ✨ 特徴
 
-- 📚 Theoretical Minimum の主要トピックをコース単位で整理した LaTeX 原稿。
-- 📖 文書間で共有する中央参考文献ファイル（`tm.bib`）。
-- 🖼️ `figs/` にある再利用可能な大規模図版ライブラリ。
-- 🧰 図の整理・生成ユーティリティ（`audit-images.py`, `plot_*.py`, `ising1.py`）。
-- 🧮 `pytearcat` を使った Jupyter ノートブックによる計算補助。
-- 🧪 ドメインウォール可視化のための NetLogo モデル（`Ising.nlogo`）。
+- 📚 コアとなる Theoretical Minimum 各テーマの、講義ごとに整理された LaTeX 原稿。
+- 📖 文書間で共有される `tm.bib` という一元化された参考文献。
+- 🖼️ `figs/` にまとめた、再利用可能な大規模な図ライブラリ。
+- 🧰 図の整備と生成のための補助ツール群（`audit-images.py`、`plot_*.py`、`ising1.py`）。
+- 🧮 Jupyter ノートブックで `pytearcat` を用いた計算補助。
+- 🧪 ドメイン壁の可視化を行う NetLogo モデル（`Ising.nlogo`）。
 
-## プロジェクト構成
+## 🗂️ プロジェクト構成
 
 ```text
 .
@@ -41,23 +41,25 @@
 ├── tm.bib
 ├── figs/
 ├── i18n/
-├── *.tex                 # Lecture notes, exercises, glossary, QFT supplements
-├── *.py                  # Helper utilities and plotting scripts
-├── *.ipynb               # Computational notebooks
+├── .auto-readme-work/
+├── notebooks/
+├── *.tex                 # 講義ノート、演習、用語集、QFT 補遺
+├── *.py                  # 補助ユーティリティと描画スクリプト
+├── notebooks/*.ipynb      # 計算ノートブック
 ├── Ising.nlogo
 └── tm.wpr
 ```
 
-## クイックスタート
+## 🚀 クイックスタート
 
 | 目的 | コマンド |
 |---|---|
-| 原稿を 1 つコンパイル | `lualatex gr.tex && bibtex gr && makeglossaries gr && lualatex gr.tex && lualatex gr.tex` |
-| 宇宙論プロットを再生成 | `python plot_scale.py` |
-| 未参照の図を監査 | `python audit-images.py --figs ./figs` |
+| 1 つの原稿をコンパイル | `lualatex gr.tex && bibtex gr && makeglossaries gr && lualatex gr.tex && lualatex gr.tex` |
+| 宇宙論プロットを再作成 | `python plot_scale.py` |
+| 参照されない図を監査 | `python audit-images.py --figs ./figs` |
 | ノートブックを開く | `jupyter notebook` |
 
-## コースノート一覧
+## 📚 講義ノート一覧
 
 | ファイル | 説明 |
 |---|---|
@@ -77,49 +79,49 @@
 | `sm.tex` | [Statistical Mechanics](http://theoreticalminimum.com/courses/statistical-mechanics/2013/spring) |
 | `tm.bib` | Theoretical Minimum の参考文献 |
 
-## 演習
+## 🧪 演習
 
 | ファイル | 説明 |
 |---|---|
-| `gr-exercises.tex` | [General Relativity](http://theoreticalminimum.com/courses/general-relativity/2012/fall) の解法付き例題 |
-| `cosmo.ipynb` | [pytearcat](https://arxiv.org/abs/2106.15016) を使って Friedmann-Lemaître-Robertson-Walker 計量の Einstein テンソルを計算 |
-| `schwartzchild.ipynb` | pytearcat を使って Schwarzschild 計量の Einstein テンソルを計算 |
+| `gr-exercises.tex` | [General Relativity](http://theoreticalminimum.com/courses/general-relativity/2012/fall) の演習解答 |
+| `cosmo.ipynb` | [pytearcat](https://arxiv.org/abs/2106.15016) を用いて、Friedmann-Lemaître-Robertson-Walker 計量に対する Einstein tensor を計算 |
+| `schwartzchild.ipynb` | pytearcat を用いて Schwarzschild 計量の Einstein tensor を計算 |
 
-注記: 以前の README では `schwartzchild.ipnb` と記載していましたが、リポジトリ内の実ファイルは `schwartzchild.ipynb` です。
+注記: 以前の README では `schwartzchild.ipnb` と記載されていましたが、実際のファイルは `schwartzchild.ipynb` です。
 
-## 補助プログラム
-
-| ファイル | 説明 |
-|---|---|
-| `audit-images.py` | 未参照の画像ファイルを検出し、`git rm` コマンドを含む `rm.sh` を生成 |
-| `ising1.py` | 1 次元 Ising モデルで講義 7 の対称性の破れを探索 |
-| `Ising.nlogo` | ドメインウォールのデモ |
-| `plot-quartic.py` | Higgs boson のメキシカンハットポテンシャルを描画 |
-| `plot_scale.py` | 宇宙論のスケールパラメータ曲線を描画 |
-| `plot1.py` | リーマン面風可視化の補助スクリプト（ソース内リンク先 gist をもとに調整） |
-| `plot2.py` | `plot1.py` 可視化補助の別バージョン |
-| `template.py` | Python プログラム用テンプレート |
-| `tm.wpr` | 補助ファイル向けの Wing IDE プロジェクト |
-
-## *QFT in a Nutshell* を補う証明
+## 🧰 補助プログラム
 
 | ファイル | 説明 |
 |---|---|
-| `qft1.tex` | 動機と基礎 |
+| `audit-images.py` | 未参照画像ファイルを特定し、`rm.sh` として `git rm` コマンドを出力 |
+| `ising1.py` | 1 次元 Ising モデルを用いて、第7講義の対称性の破れを可視化 |
+| `Ising.nlogo` | ドメイン壁のデモ |
+| `plot-quartic.py` | ヒッグスボゾンのメキシカンハット曲線を描画 |
+| `plot_scale.py` | 宇宙論のスケール係数曲線を描画 |
+| `plot1.py` | リーマン曲面スタイルの可視化ヘルパー（ソースのリンク付き gist から改変） |
+| `plot2.py` | `plot1.py` の代替可視化ヘルパー |
+| `template.py` | Python プログラムのテンプレート |
+| `tm.wpr` | 補助ファイル群用の Wing IDE プロジェクト |
+
+## 📐 *QFT in a Nutshell* の補完証明
+
+| ファイル | 説明 |
+|---|---|
+| `qft1.tex` | 動機付けと基礎 |
 | `qft2.tex` | Dirac とスピノル |
 
-## 前提条件
+## ✅ 事前準備
 
-- `lualatex` と BibTeX ツールを含む LaTeX ディストリビューション。
-- 用語集エントリを使う文書向けの `makeglossaries`。
-- 補助スクリプト用に `numpy` と `matplotlib` を含む Python 3。
-- `.ipynb` 用の Jupyter Notebook/Lab。
-- 宇宙論 / Schwarzschild ノートブック運用向けの `pytearcat`。
+- `lualatex` と BibTeX ツールを含む LaTeX 配布版。
+- 用語集付き文書では `makeglossaries` が必要。
+- 補助スクリプトの実行には Python 3 と `numpy`、`matplotlib`。
+- `.ipynb` ファイルを扱うには Jupyter Notebook/Lab。
+- 宇宙論・Schwarzschild ノートブックのワークフローには `pytearcat`。
 - 任意: [TexStudio](https://www.texstudio.org/) と [JabRef](https://www.jabref.org/)。
 
-## インストール
+## 🧱 インストール
 
-現時点ではパッケージマネージャ用ファイル（`requirements.txt`, `pyproject.toml` など）がないため、セットアップは手動です。
+現在、パッケージ管理ファイルはありません（`requirements.txt`、`pyproject.toml` など未配置）。そのためセットアップは手動です。
 
 ```bash
 # 1) Clone
@@ -132,18 +134,18 @@ source .venv/bin/activate
 pip install numpy matplotlib jupyter pytearcat
 ```
 
-TeX ディストリビューションに不足がある場合は、次のパッケージを追加してください。
+TeX 配布環境に必要なコンポーネントが不足している場合は、次を導入してください。
 
 - `tikz-feynman`
 - `glossaries` / `glossaries-extra`
 - `thmtools`
 - `pgfplots`
 
-## 使い方
+## 🧭 使用方法
 
-### 講義ノートをコンパイルする（LaTeX）
+### 🧪 講義ノートをコンパイルする（LaTeX）
 
-多くのソースで LuaLaTeX が明示されています（`% !TeX program = lualatex`）。一般的なビルド手順は次のとおりです。
+多くのソースでは LuaLaTeX が明示されています（`% !TeX program = lualatex`）。一般的なビルド順は次のとおりです。
 
 ```bash
 # Example: General Relativity notes
@@ -154,9 +156,9 @@ lualatex gr.tex
 lualatex gr.tex
 ```
 
-用語集を使わないファイルでは `makeglossaries` を省略してください。
+用語集を使用していないファイルでは `makeglossaries` は省略します。
 
-### 補助スクリプトを実行する
+### 🧬 補助スクリプトを実行する
 
 ```bash
 # Find unreferenced images in ./figs and generate rm.sh
@@ -172,33 +174,33 @@ python plot1.py
 python plot2.py
 ```
 
-### ノートブックを使う
+### 📓 ノートブックを使う
 
 ```bash
 jupyter notebook
-# Open cosmo.ipynb or schwartzchild.ipynb
+# Open notebooks/cosmo.ipynb or notebooks/schwartzchild.ipynb
 ```
 
-## 設定
+## 🛠️ 設定
 
-このリポジトリは意図的に軽量で、主にファイルベースで運用されます。
+このリポジトリは意図的に軽量で、ほぼファイル駆動です。
 
-- 図のパス規約は `figs/` と TeX ファイル中の `\graphicspath{{figs/}}` に基づきます。
-- スクリプトのデフォルト:
+- 図のパス規約は TeX ファイル内の `figs/` と `\graphicspath{{figs/}}` に基づいています。
+- スクリプトの既定値:
   - `audit-images.py`: `--figs ./figs`
-  - `ising1.py`: 調整可能なシミュレーションフラグを含む（`--m`, `--n`, `--N`, `--T`, `--cool`, `--clamped`, `--seed`, `--figs`, `--show`）
-- 現時点では集中管理された設定ファイルはありません。
+  - `ising1.py`: 調整可能なシミュレーション引数（`--m`、`--n`、`--N`、`--T`、`--cool`、`--clamped`、`--seed`、`--figs`、`--show`）
+- 現在、集中管理の設定ファイルは存在しません。
 
-## 例
+## 🧭 例
 
-### 例 1: 宇宙論のスケール因子プロットを再生成
+### 🪐 例 1: 宇宙論スケールファクターのプロットを再生成
 
 ```bash
 python plot_scale.py
 # writes figs/cosmo-2-a-t and figs/cosmo-2-a-r
 ```
 
-### 例 2: 未参照画像を監査して整理
+### 🧹 例 2: 未参照画像を監査して整理
 
 ```bash
 python audit-images.py --verbose --figs ./figs
@@ -206,7 +208,7 @@ python audit-images.py --verbose --figs ./figs
 bash rm.sh
 ```
 
-### 例 3: Advanced Quantum Mechanics ノートをビルド
+### 🧱 例 3: Advanced Quantum Mechanics ノートをビルド
 
 ```bash
 lualatex aqm.tex
@@ -216,36 +218,36 @@ lualatex aqm.tex
 lualatex aqm.tex
 ```
 
-## 開発メモ
+## 📌 開発メモ
 
-- スコープ: 個人的で継続的に更新される講義ノートと計算補助。
+- 対象: 個人的に継続的に更新される講義ノートと計算補助資料。
 - ビルド自動化は意図的に最小限で、コマンドは手動実行。
-- `.gitignore` は LaTeX 中心で、一般的なビルド成果物を除外。
-- `figs/` は大きいため、画像参照の整理には `audit-images.py` が有用。
+- `.gitignore` は LaTeX 向けに設計され、一般的なビルド成果物を除外。
+- `figs/` は規模が大きいため、`audit-images.py` が参照整合を保つのに役立ちます。
 
-## トラブルシューティング
+## 🛠️ トラブルシューティング
 
-- `tikz-feynman` のエラー: `lualatex` でコンパイル（ソースファイル推奨）。
-- 用語集の項目/出力が欠ける: LaTeX の複数回実行の間に `makeglossaries <basename>` を実行。
-- 参考文献参照が欠ける: `bibtex <basename>` の実行と `tm.bib` の存在を確認。
-- Python の import エラー（`numpy`, `matplotlib`, `pytearcat`）: 使用中の環境に必要パッケージをインストール。
-- ノートブックのカーネル不一致: 依存関係を入れた環境をカーネルとして選択。
+- `tikz-feynman` 関連エラー: `lualatex` で再コンパイルします（ソースファイルでも推奨）。
+- 用語集エントリまたは出力の欠落: LaTeX 実行間で `makeglossaries <basename>` を実行。
+- 参考文献参照の欠落: `bibtex <basename>` が実行され、`tm.bib` が存在することを確認。
+- Python のインポートエラー（`numpy`、`matplotlib`、`pytearcat`）: アクティブな環境に必要パッケージをインストール。
+- ノートブックのカーネル不一致: 依存ライブラリが入った環境を選択。
 
-## ロードマップ
+## 🗺️ ロードマップ
 
-- 再現可能なビルド自動化を追加（例: 各原稿向け `latexmk` / Makefile ラッパー）。
-- Python 依存関係のバージョン固定メタデータを追加。
-- 翻訳版 README を `i18n/` に拡充。
-- どの原稿を安定版 / 最終版とみなすかを明確化。
+- 再現可能なビルド自動化の追加（例: 原稿ごとの `latexmk` / Makefile ラッパー）。
+- Python の固定依存情報を追加。
+- `i18n/` に翻訳済み README バリアントを追加。
+- どの原稿が安定版・完成版に該当するかを明確化。
 
-## コントリビュート
+## 🤝 貢献
 
-次のような貢献を歓迎します。
+ご意見・修正は歓迎します。特に次の内容。
 
-- 誤字や数式・記法の修正。
-- リンク切れや参考文献整備。
-- ビルド/ドキュメントの改善。
-- 図やスクリプトの再現性向上。
+- タイポや式・記法の修正。
+- 破損リンクの修正と参照のクリーンアップ。
+- ビルド・ドキュメント改善。
+- 図・スクリプトの再現性向上。
 
 推奨ワークフロー:
 
@@ -257,13 +259,9 @@ git push
 # open a pull request
 ```
 
-## 謝辞
 
-- *Theoretical Minimum* 講義を提供する Leonard Susskind 氏と協力者の方々。
-- 本プロジェクトで使用しているツールには [TexStudio](https://www.texstudio.org/) と [JabRef](https://www.jabref.org/) があります。
+## ❤️ Support
 
-## ライセンス
-
-リポジトリ全体のライセンステキストは [LICENSE](../LICENSE) にあり、現在は **CC0 1.0 Universal** です。
-
-注記: 個別ソースファイルには独自の著作権/ライセンスヘッダが含まれる場合があります。コード再利用時はそれらの表記を保持してください。
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://camo.githubusercontent.com/24a4914f0b42c6f435f9e101621f1e52535b02c225764b2f6cc99416926004b7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d4c617a79696e674172742d3045413545393f7374796c653d666f722d7468652d6261646765266c6f676f3d6b6f2d6669266c6f676f436f6c6f723d7768697465)](https://chat.lazying.art/donate) | [![PayPal](https://camo.githubusercontent.com/d0f57e8b016517a4b06961b24d0ca87d62fdba16e18bbdb6aba28e978dc0ea21/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f50617950616c2d526f6e677a686f754368656e2d3030343537433f7374796c653d666f722d7468652d6261646765266c6f676f3d70617970616c266c6f676f436f6c6f723d7768697465)](https://paypal.me/RongzhouChen) | [![Stripe](https://camo.githubusercontent.com/1152dfe04b6943afe3a8d2953676749603fb9f95e24088c92c97a01a897b4942/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374726970652d446f6e6174652d3633354246463f7374796c653d666f722d7468652d6261646765266c6f676f3d737472697065266c6f676f436f6c6f723d7768697465)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
